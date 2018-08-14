@@ -29,7 +29,7 @@ const reducer = (state = initialState, action) => {
        if(typeof key[0] !== 'undefined'){
             if(action.parent.constructor === Array){
                 newParent = [...action.parent];
-                newParent[attrkey] = value;
+                newParent[attrKey] = value;
             return {
                 ...state,
                 json : {...newJson ,
