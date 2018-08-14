@@ -16,6 +16,7 @@ const reducer = (state = initialState, action) => {
 
         const type = action.attrInfos.type;
         const attrKey = action.attrInfos.attrKey;
+        //console.log('reducer attrKey : ',attrKey);
         const typeDefaultValues = {
             string: '',
             object: {},
@@ -39,7 +40,7 @@ const reducer = (state = initialState, action) => {
                 return {
                     ...state,
                     json : {...newJson ,
-                    [key] : {...action.parent, [attrkey] : value}    
+                    [key] : {...action.parent, [attrKey] : value}    
                     }
                 }
             }
@@ -54,7 +55,7 @@ const reducer = (state = initialState, action) => {
         case actionTypes.EDIT_ATTRIBUTE :
         
         var attrkey = action.attrInfos.attrkey,value = action.attrInfos.value,parent = action.parent;
-        console.log('parent : ',action.parent);
+        //console.log('parent : ',action.parent);
         var newJson = {...state.json};
        var key = Object.keys(newJson).filter(i => (newJson[i]===action.parent));
        //console.log('key : ',key[0]);

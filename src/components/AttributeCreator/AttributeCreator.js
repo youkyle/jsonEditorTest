@@ -70,7 +70,7 @@ class AttributeCreator extends Component {
     
 
     createAttribute = () => {
-        console.log('attrkey : ',this.state.attrkey );
+        //console.log('attrkey : ',this.state.attrkey );
         this.setState({creating: false});
         const infosAttr = {type : this.state.type, attrKey : this.state.attrkey};
         this.props.onCreateAttribute(this.props.parent,infosAttr);
